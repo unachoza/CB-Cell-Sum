@@ -9,7 +9,12 @@ const App = () => {
   const [total, setTotal] = useState([null]);
   const [showErrorText, setShowErrorText] = useState(false);
 
-  const validateInputs = (input) => !isNaN(input);
+  const validateInputs = (input) => {
+    console.log({ input })
+    console.log(typeof input)
+    console.log(!isNaN(input))
+    return !isNaN(input)
+  };
 
   const getValues = (e, idx) => {
     const updatedValue = parseInt(e.target.value, 10);
@@ -30,6 +35,11 @@ const App = () => {
         The first 3 cells in the grid contain input fields that accept numbers. The fourth cell in the grid will display
         the sum of the numbers in the first three cells.
       </p>
+        {showErrorText && (
+          <p role="alert">
+            Please make sure you've entered a <em>number</em>
+          </p>
+        )}
       <div className="cell-container">
         {cellValues.map((cell, idx) => {
           return (
@@ -38,11 +48,6 @@ const App = () => {
         })}
         <Cell value={showErrorText ? "Error" : total} isDisabled={true} />
       </div>
-      {showErrorText && (
-        <p role="alert">
-          Please make sure you've entered a <em>number</em>
-        </p>
-      )}
     </div>
   );
 };

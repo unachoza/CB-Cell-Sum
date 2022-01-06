@@ -3,9 +3,9 @@ body {
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgba(25, 25, 122, 0.219);
+  background: rgb(0,51,102);
+  background: linear-gradient(74deg, rgba(0,51,102,1) 0%, rgba(83,144,204,1) 98%)
 }
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

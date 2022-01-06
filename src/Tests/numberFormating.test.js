@@ -38,7 +38,10 @@ describe("sum all values", () => {
 });
 
 describe("handles errors caused by letters", () => {
-  test("if letter present, does use receive error message", () => {
+  test("if letter present without number, does use receive error message", () => {
+    expect(validateInputs("b")).toBe(false)
+  })
+  test("if letter present with number does use receive error message", () => {
     expect(validateInputs("3b")).toBe(false)
   })
 })

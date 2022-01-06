@@ -1,11 +1,15 @@
 .app {
   text-align: center;
   padding: 2em 0;
+  height: 100vh;
 }
 
 img {
-  height: 35px;
-  width: auto;
+  height: 30px;
+    border: solid 1px;
+    border-radius: 5px;
+    padding: 30px;
+    background: white;
 }
 
 .app-intro,p {
