@@ -5,17 +5,18 @@
 }
 
 img {
-  height: 30px;
-    border: solid 1px;
-    border-radius: 5px;
-    padding: 30px;
-    background: white;
+  height: 35px;
+  border: solid 1px;
+  border-radius: 5px;
+  padding: 35px;
+  background: white;
+  margin: 35px;
 }
 
 .app-intro,p {
-  width: 50vw;
+  width: 70vw;
   margin: 50px auto;
-  font-size: 20px;
+  font-size: 25px;
 }
 
 .cell-container {
@@ -66,6 +67,14 @@ img {
   .hide-this {
     font-size: 35px;
   }
+}
+.header-text{
+  height: 450px;
+}
+.error-text p{
+  color: #e6563d;
+  font-size: 35px;
+  /* background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,0,0,0.5676645658263305) 100%); */
 }
 @media only screen and (max-width: 360px) {
   .cell-container {

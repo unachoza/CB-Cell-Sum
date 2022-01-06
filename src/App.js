@@ -30,20 +30,26 @@ const App = () => {
 
   return (
     <div className="app">
+      <div className="header-text">
+
       <img src={logo} alt="CB Insights logo" />
       <p className="app-intro">
         The first 3 cells in the grid contain input fields that accept numbers. The fourth cell in the grid will display
         the sum of the numbers in the first three cells.
-      </p>
+        </p>
+        <div className="error-text">
+
         {showErrorText && (
           <p role="alert">
             Please make sure you've entered a <em>number</em>
           </p>
         )}
+        </div>
+      </div>
       <div className="cell-container">
         {cellValues.map((cell, idx) => {
           return (
-            <Cell idx={idx} key={`cell-${idx}`} getValues={(e) => getValues(e, idx)} blur={(e) => handleBlur(e)} />
+            <Cell idx={idx} key={`cell-${idx}`} getValues={(e) => getValues(e, idx)} blur={(e) => handleBlur(e)} showErrorText={showErrorText}/>
           );
         })}
         <Cell value={showErrorText ? "Error" : total} isDisabled={true} />
