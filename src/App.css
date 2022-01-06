@@ -2,30 +2,16 @@
   text-align: center;
   padding: 2em 0;
 }
+
 img {
   height: 35px;
+  width: auto;
 }
 
-.cell {
-  height: 30vh;
-  width: 25vw;
-  border: solid 1px;
-  background-color: pink;
-  margin: 20px;
-  box-shadow: 0 0 10px;
-}
-
-.cell:hover {
-  background-color: rgb(242, 172, 183);
-}
-.cell:active {
-  background-color: rgb(242, 172, 183);
-}
-.grow {
-  transition: all 0.2s ease-in-out;
-}
-.grow:hover {
-  transform: scale(1.05);
+.app-intro,p {
+  width: 50vw;
+  margin: 50px auto;
+  font-size: 20px;
 }
 
 .cell-container {
@@ -35,56 +21,50 @@ img {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  background-color: deeppink;
 }
 
-.app-intro {
-  width: 50vw;
-  margin: 50px auto;
-  font-size: 20px;
-  font-family: 'Roboto', sans-serif;
+.cell {
+  height: 30vh;
+  width: 25vw;
+  min-width: 180px;
+  border: solid 1px;
+  border-radius: 5px;
+  background-color: white;
+  margin: 20px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }
 
+.grow {
+  transition: all 0.2s ease-in-out;
+}
+
+.grow:hover {
+  transform: scale(1.05);
+}
+
+.hide-this {
+  border: none;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0);
+  font-size: 40px;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
 
 @media only screen and (max-width: 720px) {
-  .cell-container{
-    width:80vw;
+  .cell-container {
+    width: 80vw;
     flex-wrap: wrap;
     margin: 0 auto;
   }
-  .cell {
-    background-color: rgb(9, 148, 194);
-    height: 20vh;
-    
+
+  .hide-this {
+    font-size: 35px;
   }
 }
 @media only screen and (max-width: 360px) {
-  .cell-container{
-    width: 40vw
+  .cell-container {
+    width: 40vw;
   }
-  .cell {
-    background-color: green;
-    height:15vh
-  }
-}
-
-
-/* button click realistic feel  */
-cell:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
-  transition: all 0.2s;
-}
-cell::after {
-  transform: scaleX(1.4) scaleY(1.6);
-  opacity: 0;
-  transition: all 0.2s;
-}
-
-cell:active,
-cell:focus {
-  outline: none;
-  transform: translateY(-1px);
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-  transition: all 0.2s;
 }

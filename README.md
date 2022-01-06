@@ -1,24 +1,18 @@
 # Summing Grid Assignment
-## Setup
-
-### With Create React App
-
-If you'd like to use React, this repo is set up with `create-react-app`. To get started:
-
-1. run `npm install` / `yarn install` to install the dependencies.
-2. run `npm start` / `yarn start` to start the application.
-
-### With a different framework
-
-You may choose another web framework to complete this task.
-The root `package.json` in this repo can be adjusted to install whatever dependencies you need. **Make sure that `start` and `test` scripts in `./package.json` still work so your reviewer can properly evaluate your work.**
-
 ## Submission
+My thought process: 
+I tried to keep state to a minimum, 
 
-Send a **zip file** of your completed exercise to your contact at CB Insights.
+I payed attention to responsiveness by using screen size (veiw width, and view height) as well as media breakpoints were asked
 
-----
+I over thought validation for a while, then realized, !NaN does the trick. I gave the user two error messages, and tried to keep them non abbrasive with black font and a gentle message. 
 
+By using spread opperator to keep total, and mapping over cell values, more cells can easily be added or removed without breaking UI, and by styling based of vw, all cells resize nicely when more are added. 
+
+The four cells are identical when it comes to UI, with minimum distinctions in functionality, making them ideal case for a separate reusable component.   
+
+Looking forward to your feedback, 
+Arianna Choza
 ## Your task
 
 Your task is to create a **flexible grid with four cells**. The first 3 cells in the grid should contain input fields that accept numbers. The fourth cell in the grid should display the sum of the numbers in the first three cells.
@@ -51,3 +45,5 @@ If you have extra time, consider the below additional criteria.
 - How number formatting should handle edge cases
 
 We're excited to see what you come up with!
+
+
