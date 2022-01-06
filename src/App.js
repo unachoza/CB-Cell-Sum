@@ -10,9 +10,6 @@ const App = () => {
   const [showErrorText, setShowErrorText] = useState(false);
 
   const validateInputs = (input) => {
-    console.log({ input })
-    console.log(typeof input)
-    console.log(!isNaN(input))
     return !isNaN(input)
   };
 
