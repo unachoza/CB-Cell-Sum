@@ -1,5 +1,4 @@
 import { formatValueTo3, getTotal } from "../calcs/numberFormating";
-import {validateInputs} from './App.js'
 
 describe("Calculations to format the number to the nearest 3-digit number", () => {
   test("if 200000 will format less than 0 ", () => {
@@ -36,12 +35,3 @@ describe("sum all values", () => {
   });
     
 });
-
-describe("handles errors caused by letters", () => {
-  test("if letter present without number, does use receive error message", () => {
-    expect(validateInputs("b")).toBe(false)
-  })
-  test("if letter present with number does use receive error message", () => {
-    expect(validateInputs("3b")).toBe(false)
-  })
-})

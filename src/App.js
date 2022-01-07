@@ -9,7 +9,7 @@ const App = () => {
   const [total, setTotal] = useState([null]);
   const [showErrorText, setShowErrorText] = useState(false);
 
-  const validateInputs = (input) => {
+ const validateInputs = (input) => {
     return !isNaN(input)
   };
 
